@@ -2,9 +2,9 @@
   "name": "backend-contasemmimimi",
   "version": "1.0.0",
   "description": "Financial Management App",
-  "main": "index.js",
+  "main": "server.ts",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "ts-node-dev --transpile-only --clear ./src/main/server.ts"
   },
   "keywords": [],
   "author": "",
