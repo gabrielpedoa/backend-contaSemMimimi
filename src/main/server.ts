@@ -2,6 +2,7 @@ import * as dotenv from "dotenv";
 import express from "express";
 import cors from "cors";
 import dbConnect from "./config/utils/dbConnect";
+import router from "./config/router/router";
 
 dotenv.config();
 
@@ -24,7 +25,7 @@ class Server {
 
   public bootstrap() {
     this.middlewares();
-    //routes(this.app);
+    router(this.app);
     dbConnect();
     this.start();
   }
