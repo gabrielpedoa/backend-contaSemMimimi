@@ -5,6 +5,7 @@ export class DeleteController implements IController<{ id: string }, unknown> {
 
   public async handle({ id }: { id: string }): Promise<httpResponse<unknown>> {
     try {
+      console.log(id);
       if (!id) return BadRequest("O paramêtro id na url é obrigatório");
       const deleted = await this.deleteUsecase.execute(id);
       return Ok(deleted);

@@ -15,13 +15,11 @@ export const createUserSchema = z.object({
 });
 
 export const updateUserSchema = z.object({
-  id_user: z.string(),
-  name: z.string().min(1, "Name is required"),
-  phone: z.string().min(10, "Phone number must be at least 10 characters long"),
-  email: z.string().email("Invalid email address"),
-  password: z.string().min(6, "Password must be at least 6 characters long"),
-  role: z.number().int().positive(),
-  active: z.boolean(),
-  created_at: z.date(),
-  updated_at: z.date(),
+  id_user: z.string({ required_error: "Id é obrigatório" }),
+  name: z.string().optional(),
+  phone: z.string().optional(),
+  email: z.string().optional(),
+  password: z.string().optional(),
+  role: z.number().int().positive().optional(),
+  active: z.boolean().optional(),
 });

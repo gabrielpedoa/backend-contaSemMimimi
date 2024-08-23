@@ -14,7 +14,7 @@ export class LoadByIdController<T>
     try {
       if (!id) return BadRequest("O id é necessario");
       const item = await this.loadByIdUsecase.execute(id);
-      if (!item) return NotFound();
+      if (!item) return NotFound(id);
       return Ok(item);
     } catch (error) {
       console.log("LoadByIdController: ", error);

@@ -1,3 +1,3 @@
 export interface ILoadUserByEmailUseCase {
-  execute(email: string): Promise<IUsers | null>;
+  execute(email: string): Promise<Omit<IUsers, "password"> | null>;
 }

@@ -7,7 +7,7 @@ export class UsersRepository {
   }
 
   public async loadAll(): Promise<IUsers[]> {
-    const users = await prisma.users.findMany();
+    const users = await prisma.users.findMany({ where: { active: true } });
     return users;
   }
 

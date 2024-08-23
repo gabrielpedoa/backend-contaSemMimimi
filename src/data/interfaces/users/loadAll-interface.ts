@@ -1,3 +1,3 @@
 export interface ILoadAllUsersUseCase {
-  execute(): Promise<IUsers[]>;
+  execute(): Promise<Omit<IUsers, "password">[]>;
 }

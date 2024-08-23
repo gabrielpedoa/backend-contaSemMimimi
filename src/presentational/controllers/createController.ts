@@ -1,4 +1,8 @@
-import { BadRequest, Created, ExceptionError } from "../helpers/httpResponse";
+import {
+  BadRequest,
+  Created,
+  PayloadExceptionError,
+} from "../helpers/httpResponse";
 
 export class CreateController<In, Out> implements IController<In, unknown> {
   constructor(
@@ -14,7 +18,7 @@ export class CreateController<In, Out> implements IController<In, unknown> {
       return Created(response);
     } catch (error) {
       console.log("CreateController: ", error);
-      return ExceptionError(error);
+      return PayloadExceptionError(error);
     }
   }
 }

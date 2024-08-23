@@ -4,10 +4,10 @@ import { ILoadUserByIdUseCase } from "../../interfaces/users/loadById-interface"
 
 export class LoadByIdUserUseCase implements ILoadUserByIdUseCase {
   constructor(private userRepository: IUserRepository) {}
-  async execute(id: number): Promise<IUsers | null> {
-    const user = await this.userRepository.loadById(id);
+  async execute(id: number | string): Promise<Omit<IUsers, "password"> | null> {
+    const user = await this.userRepository.loadById(Number(id));
     if (!user) throw new NotFoundError("User doesn't exists!");
-
-    return user;
+    const { password, ...rest } = user;
+    return rest;
   }
 }

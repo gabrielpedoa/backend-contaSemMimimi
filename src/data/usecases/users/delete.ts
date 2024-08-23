@@ -4,9 +4,9 @@ import { IDeleteUserUseCase } from "../../interfaces/users/delete-interface";
 
 export class DeleteUserUseCase implements IDeleteUserUseCase {
   constructor(private userRepository: IUserRepository) {}
-  async execute(id: number): Promise<boolean> {
-    const userExists = await this.userRepository.loadById(id);
+  async execute(id: number | string): Promise<boolean> {
+    const userExists = await this.userRepository.loadById(Number(id));
     if (!userExists) throw new NotFoundError("User not found");
-    return await this.userRepository.delete(id);
+    return await this.userRepository.delete(Number(id));
   }
 }

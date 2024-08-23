@@ -1,3 +1,3 @@
 export interface IUpdateUserUseCase {
-  execute(data: IUsers): Promise<IUsers>;
+  execute(data: IUsers): Promise<Omit<IUsers, "password">>;
 }
