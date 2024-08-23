@@ -1,6 +1,7 @@
 import { Request, Response } from "express";
+import errorHandler from "../errors/errorHandler";
 
-export default <In>(controller: IController<In, unknown>) => {
+export default <In>(controller: IController<In>) => {
   return async (req: Request, res: Response) => {
     try {
       const { data, statusCode } = await controller.handle({
@@ -10,8 +11,9 @@ export default <In>(controller: IController<In, unknown>) => {
       });
       return res.status(statusCode).json(data);
     } catch (error) {
-      console.log("ExpressAdapter: ", error);
-      return res.status(500).json({ message: "Internal Server Error" });
+      console.log("catch expressAdapter", error);
+      const { data, statusCode } = errorHandler(error);
+      return res.status(statusCode).json(data);
     }
   };
 };

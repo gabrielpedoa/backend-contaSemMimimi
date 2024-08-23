@@ -1,14 +1,10 @@
-import { ExceptionError, Ok } from "../helpers/httpResponse";
+import { Ok } from "../helpers/httpResponse";
 
-export class LoadAllController<T> implements IController<undefined, unknown> {
+export class LoadAllController<T> implements IController<undefined> {
   constructor(private readonly loadlAllUseCase: ILoadAllUsecase<T>) {}
 
-  public async handle(): Promise<httpResponse<unknown>> {
-    try {
-      const data = await this.loadlAllUseCase.execute();
-      return Ok(data);
-    } catch (error) {
-      return ExceptionError(error);
-    }
+  public async handle(): Promise<IHttpResponse> {
+    const data = await this.loadlAllUseCase.execute();
+    return Ok(data);
   }
 }

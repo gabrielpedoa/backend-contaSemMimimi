@@ -1,0 +1,29 @@
+2024-08-23T15:05:49.484Z error: {}
+2024-08-23T15:06:26.136Z error: {}
+2024-08-23T15:06:26.139Z error: ::ffff:127.0.0.1 PUT /users/update/5 500 Internal Server Error!
+2024-08-23T15:08:45.209Z error: {}
+2024-08-23T15:08:45.212Z error: ::ffff:127.0.0.1 PUT /users/update/5 500 Internal Server Error!
+2024-08-23T16:48:05.068Z error: ::ffff:127.0.0.1 PUT /users/update/5 404 [object Object]
+2024-08-23T16:48:26.110Z error: ::ffff:127.0.0.1 PUT /users/update/1 404 [object Object]
+2024-08-23T16:48:44.586Z error: ::ffff:127.0.0.1 PUT /users/update/1 404 [object Object]
+2024-08-23T16:49:52.747Z error: ::ffff:127.0.0.1 PUT /users/update/1 404 [object Object]
+2024-08-23T16:50:22.254Z error: ::ffff:127.0.0.1 PUT /users/update/1 404 [object Object]
+2024-08-23T16:51:24.263Z error: ::ffff:127.0.0.1 PUT /users/update/1 404 [object Object]
+2024-08-23T16:51:40.184Z error: {"statusCode":404,"data":null}
+2024-08-23T16:51:40.189Z error: ::ffff:127.0.0.1 PUT /users/update/1 500 Internal Server Error!
+2024-08-23T16:51:50.220Z error: ::ffff:127.0.0.1 PUT /users/update/1 404 [object Object]
+2024-08-23T16:52:21.305Z error: {}
+2024-08-23T16:52:21.309Z error: ::ffff:127.0.0.1 PUT /users/update/1 500 Internal Server Error!
+2024-08-23T16:52:52.774Z error: ::ffff:127.0.0.1 PUT /users/update/1 404 [object Object]
+2024-08-23T16:53:10.497Z error: ::ffff:127.0.0.1 PUT /users/update/1 404 [object Object]
+2024-08-23T16:54:34.045Z error: ::ffff:127.0.0.1 PUT /users/update/1 404 [object Object]
+2024-08-23T16:55:25.545Z error: ::ffff:127.0.0.1 PUT /users/update/1 404 [object Object]
+2024-08-23T16:57:56.618Z error: ::ffff:127.0.0.1 PUT /users/update/1 404 [object Object]
+2024-08-23T16:59:36.249Z error: ::ffff:127.0.0.1 PUT /users/update/1 404 [object Object]
+2024-08-23T17:06:32.599Z error: ::ffff:127.0.0.1 PUT /users/update/1 404 [object Object]
+2024-08-23T17:07:38.466Z error: {}
+2024-08-23T17:07:38.467Z error: ::ffff:127.0.0.1 GET /users/get/1 500 Internal Server Error!
+2024-08-23T19:57:47.265Z error: ::ffff:127.0.0.1 PUT /users/update/1 404 [object Object]
+2024-08-23T20:02:57.734Z error: ::ffff:127.0.0.1 PUT /users/delete/2 404 [object Object]
+2024-08-23T20:05:39.856Z error: ::ffff:127.0.0.1 GET /users/get/4 404 [object Object]
+2024-08-23T20:05:49.790Z error: ::ffff:127.0.0.1 PUT /users/delete/4 404 [object Object]

@@ -11,10 +11,14 @@ export class SchemaValidator<T> implements ISchemaValidator<T> {
     if (isSchemaValid.success) {
       return null;
     }
-    console.log("ZodSchemaValidator");
+    const formattedErrors = isSchemaValid.error.errors.map((e) => ({
+      path: e.path,
+      message: e.message,
+    }));
     return {
       statusCode: 400,
-      error: isSchemaValid.error.errors,
+      errorType: "PayloadError",
+      errorMessage: formattedErrors,
     };
   }
 }

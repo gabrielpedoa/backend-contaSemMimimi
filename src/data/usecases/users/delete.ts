@@ -1,4 +1,4 @@
-import { IUserRepository } from "../../../infra/interfaces/user-repository";
+import { IUserRepository } from "../../../infra/interfaces/user.repository.interface";
 import { NotFoundError } from "../../../main/config/errors/notFound-error";
 import { IDeleteUserUseCase } from "../../interfaces/users/delete-interface";
 

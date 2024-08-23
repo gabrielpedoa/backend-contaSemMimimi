@@ -1,3 +1,3 @@
 export interface IEncryptGenerateHash {
-  genHash(value: string): Promise<string>;
+  generateHash(value: string): Promise<string>;
 }

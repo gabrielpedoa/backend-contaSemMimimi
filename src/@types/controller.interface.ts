@@ -1,5 +1,5 @@
-interface IController<In, Out> {
-  handle: (data: In) => Promise<httpResponse<Out>>;
+interface IController<In> {
+  handle(data: In): Promise<IHttpResponse>;
 }
 
 interface ICreateUsecase<In, Out> {

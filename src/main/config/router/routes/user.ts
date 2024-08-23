@@ -1,5 +1,5 @@
 import { Router } from "express";
-import expressAdapter from "../../../utils/expressAdapter";
+import expressAdapter from "../../adapter/expressAdapter";
 import { createUserUseCaseControllerFactory } from "../../../factory/controller/users/create";
 import { loadAllUsersUseCaseControllerFactory } from "../../../factory/controller/users/loadAll";
 import { loadByIdUserUseCaseControllerFactory } from "../../../factory/controller/users/loadById";
