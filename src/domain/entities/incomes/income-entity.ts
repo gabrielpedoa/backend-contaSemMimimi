@@ -8,7 +8,9 @@ export class IncomeEntity {
   private created_at: Date;
   private updated_at: Date;
   private active: boolean;
-  
+  private name: string;
+  private obs: string;
+
   constructor(data: IIncome) {
     this.id_income = data.id_income;
     this.category_id = data.category_id;
@@ -19,6 +21,8 @@ export class IncomeEntity {
     this.created_at = data.created_at;
     this.updated_at = data.updated_at;
     this.active = data.active;
+    this.name = data.name;
+    this.obs = data.obs;
   }
 
   public getIncomeEntity(): IIncome {
@@ -32,6 +36,8 @@ export class IncomeEntity {
       created_at: this.created_at,
       updated_at: this.updated_at,
       active: this.active,
+      name: this.name,
+      obs: this.obs,
     };
   }
 }

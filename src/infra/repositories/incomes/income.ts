@@ -15,6 +15,12 @@ export class IncomeRepository {
     return await prisma.income.findFirst({ where: { id_income: id } });
   }
 
+  public async loadByName(name: string): Promise<IIncome | null> {
+    return await prisma.income.findFirst({
+      where: { active: true, name: name },
+    });
+  }
+
   public async update(data: IIncome): Promise<IIncome> {
     return await prisma.income.update({
       data: { ...data },

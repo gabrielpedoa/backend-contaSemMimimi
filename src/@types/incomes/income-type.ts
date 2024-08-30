@@ -8,4 +8,6 @@ type IIncome = {
   created_at: Date;
   updated_at: Date;
   active: boolean;
+  name: string;
+  obs: string;
 };

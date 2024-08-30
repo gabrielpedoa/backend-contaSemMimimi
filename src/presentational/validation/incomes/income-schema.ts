@@ -8,6 +8,8 @@ export const createIncomeSchema = z.object({
   created_at: z.date({ required_error: "Creation date is required" }),
   updated_at: z.date({ required_error: "Update date is required" }),
   active: z.boolean({ required_error: "Active status is required" }),
+  name: z.string({ required_error: "Name is required" }),
+  obs: z.string().optional(),
 });
 
 export const updateIncomeSchema = z.object({
@@ -20,4 +22,6 @@ export const updateIncomeSchema = z.object({
   created_at: z.date().optional(),
   updated_at: z.date().optional(),
   active: z.boolean().optional(),
+  name: z.string().optional(),
+  obs: z.string().optional(),
 });

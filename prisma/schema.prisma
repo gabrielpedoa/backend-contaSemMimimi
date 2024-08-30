@@ -29,6 +29,8 @@ model income {
   created_at  DateTime @default(now())
   updated_at  DateTime @updatedAt
   active      Boolean  @default(true)
+  name        String
+  obs         String
 }
 
 model expense {
