@@ -21,6 +21,12 @@ export class IncomeCategoryRepository {
     });
   }
 
+  public async loadByName(name: string): Promise<IIncomeCategory | null> {
+    return await prisma.income_category.findFirst({
+      where: { active: true, name: name },
+    });
+  }
+
   public async update(data: IIncomeCategory): Promise<IIncomeCategory> {
     return await prisma.income_category.update({
       data: { ...data },
