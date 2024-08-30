@@ -1,5 +1,5 @@
 import { Optional } from "@prisma/client/runtime/library";
-import { IUserRepository } from "../../../infra/interfaces/user.repository.interface";
+import { IUserRepository } from "../../../infra/interfaces/users/user-repository-interface";
 import { ILoadAllUsersUseCase } from "../../interfaces/users/loadAll-interface";
 
 export class LoadAllUsersUseCase implements ILoadAllUsersUseCase {

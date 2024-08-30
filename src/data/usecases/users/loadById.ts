@@ -1,4 +1,4 @@
-import { IUserRepository } from "../../../infra/interfaces/user.repository.interface";
+import { IUserRepository } from "../../../infra/interfaces/users/user-repository-interface";
 import { NotFoundError } from "../../../main/config/errors/notFound-error";
 import { ILoadUserByIdUseCase } from "../../interfaces/users/loadById-interface";
 

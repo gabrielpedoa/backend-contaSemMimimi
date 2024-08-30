@@ -1,9 +1,9 @@
 import { Optional } from "@prisma/client/runtime/library";
-import { IUserRepository } from "../../../infra/interfaces/user.repository.interface";
+import { IUserRepository } from "../../../infra/interfaces/users/user-repository-interface";
 import { PayloadError } from "../../../main/config/errors/payload-error";
 import { IEncryptGenerateHash } from "../../interfaces/encrypt/generateHash-interface";
 import { ICreateUserUseCase } from "../../interfaces/users/create-interface";
-import { UserEntity } from "../../../domain/entities/user.entity";
+import { UserEntity } from "../../../domain/entities/user-entity";
 
 export class CreateUserUseCase implements ICreateUserUseCase {
   constructor(

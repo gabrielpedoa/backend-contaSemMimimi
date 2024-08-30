@@ -1,4 +1,4 @@
-import { IUserRepository } from "../../../infra/interfaces/user.repository.interface";
+import { IUserRepository } from "../../../infra/interfaces/users/user-repository-interface";
 import { NotFoundError } from "../../../main/config/errors/notFound-error";
 import { UnauthorizedError } from "../../../main/config/errors/unauthorized-error";
 import { IEncryptCompareHash } from "../../interfaces/encrypt/compareHash-interface";

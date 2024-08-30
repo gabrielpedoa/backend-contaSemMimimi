@@ -1,15 +1,3 @@
-type data = {
-  id_user?: number;
-  name: string;
-  phone: string;
-  email: string;
-  password: string;
-  role: number;
-  active: boolean;
-  created_at: Date;
-  updated_at: Date;
-};
-
 export class UserEntity {
   private id_user?: number;
   private name: string;
@@ -20,12 +8,12 @@ export class UserEntity {
   private active: boolean;
   private created_at: Date;
   private updated_at: Date;
-  constructor(data: data) {
+  constructor(data: IUsers) {
     this.id_user = data.id_user;
     this.name = data.name;
     this.phone = data.phone;
     this.email = data.email;
-    this.password = data.password;
+    this.password = data.password!;
     this.role = data.role;
     this.active = data.active;
     this.created_at = data.created_at;
