@@ -1,5 +1,5 @@
 type IExpenseCategory = {
-  id_category?: string;
+  id_category?: number;
   name: string;
   description: string;
   created_at: Date;
