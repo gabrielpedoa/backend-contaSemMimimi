@@ -1,4 +1,3 @@
 export interface ILoadByIdIncomeCategoryUseCase {
-    execute: (id: number) => Promise<IIncomeCategory | null>;
-  }
-  
+  execute: (id: number | string) => Promise<IIncomeCategory | null>;
+}

@@ -6,8 +6,8 @@ export class LoadByIdIncomeCategoryUseCase
   implements ILoadByIdIncomeCategoryUseCase
 {
   constructor(private readonly incomeRepository: IIncomeCategoryRepository) {}
-  async execute(id: number): Promise<IIncomeCategory> {
-    const categoryExists = await this.incomeRepository.loadById(id);
+  async execute(id: number | string): Promise<IIncomeCategory> {
+    const categoryExists = await this.incomeRepository.loadById(Number(id));
     if (!categoryExists) throw new NotFoundError("Income Category not found");
     return categoryExists;
   }

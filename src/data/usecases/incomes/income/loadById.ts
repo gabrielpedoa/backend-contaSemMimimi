@@ -5,8 +5,8 @@ import { ILoadByIdIncomeUseCase } from "../../../interfaces/incomes/income/loadB
 export class LoadByIdIncomeUseCase implements ILoadByIdIncomeUseCase {
   constructor(private readonly incomeRepository: IIncomeRepository) {}
 
-  async execute(id: number): Promise<IIncome | null> {
-    const income = await this.incomeRepository.loadById(id);
+  async execute(id: number | string): Promise<IIncome | null> {
+    const income = await this.incomeRepository.loadById(Number(id));
     if (!income) throw new NotFoundError("Income not found");
     return income;
   }

@@ -1,3 +1,3 @@
 export interface IDeleteIncomeCategoryUseCase {
-  execute: (id: number) => Promise<boolean>;
+  execute: (id: number | string) => Promise<boolean>;
 }
