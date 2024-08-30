@@ -24,7 +24,10 @@ export class AuthUseCase implements IAuthUseCase {
       user?.password!
     );
 
-    if (!passwordCompared) throw new UnauthorizedError("Invalid credentials");
+    if (!passwordCompared)
+      throw new UnauthorizedError(
+        "Invalid credentials, please check your email or password!"
+      );
 
     const { password, ...rest } = user;
 

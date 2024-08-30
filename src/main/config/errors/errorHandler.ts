@@ -7,7 +7,6 @@ interface CustomError {
   statusCode: number;
   errorType: string;
   errorMessage: string;
-  errorCode?: string;
 }
 
 function getErrorType(errorInstance: CustomError) {
@@ -17,7 +16,6 @@ function getErrorType(errorInstance: CustomError) {
       errorType: errorInstance.errorType,
       errorMessage: errorInstance.errorMessage,
       statusCode: errorInstance.statusCode,
-      errorCode: errorInstance.errorCode,
     },
   };
 }
