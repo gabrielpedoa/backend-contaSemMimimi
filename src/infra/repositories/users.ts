@@ -2,7 +2,10 @@ import prisma from "../prisma";
 
 export class UsersRepository {
   public async create(data: Omit<IUsers, "id_user">): Promise<IUsers> {
-    const createUser = await prisma.users.create({ data: { ...data } });
+    const { password, ...rest } = data;
+    const createUser = await prisma.users.create({
+      data: { ...rest, password: password! },
+    });
     return createUser;
   }
 

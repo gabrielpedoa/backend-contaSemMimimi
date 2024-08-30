@@ -19,7 +19,7 @@ export class CreateUserUseCase implements ICreateUserUseCase {
     const emailExists = await this.userRepository.loadByEmail(rest.email);
     if (emailExists) throw new PayloadError("Email already exists");
 
-    const hashedPassword = await this.encryptService.generateHash(password);
+    const hashedPassword = await this.encryptService.generateHash(password!);
 
     const userEntity = new UserEntity({
       password: hashedPassword,

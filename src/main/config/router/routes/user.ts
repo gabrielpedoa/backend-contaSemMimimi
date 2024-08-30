@@ -5,18 +5,18 @@ import { loadAllUsersUseCaseControllerFactory } from "../../../factory/controlle
 import { loadByIdUserUseCaseControllerFactory } from "../../../factory/controller/users/loadById";
 import { updateUserUseCaseControllerFactory } from "../../../factory/controller/users/update";
 import { deleteUserUseCaseControllerFactory } from "../../../factory/controller/users/delete";
-import isAuthenticated from "../../../middleware/isAuthenticated";
+import authMiddleware from "../../../middleware/authMiddleware";
 
 export default async (router: Router) => {
   router.get(
     "/users/list",
-    isAuthenticated,
+    authMiddleware,
     expressAdapter(loadAllUsersUseCaseControllerFactory())
   );
 
   router.get(
     "/users/get/:id",
-    isAuthenticated,
+    authMiddleware,
     expressAdapter(loadByIdUserUseCaseControllerFactory())
   );
 
@@ -27,13 +27,13 @@ export default async (router: Router) => {
 
   router.put(
     "/users/update/:id_user",
-    isAuthenticated,
+    authMiddleware,
     expressAdapter(updateUserUseCaseControllerFactory())
   );
 
   router.put(
     "/users/delete/:id",
-    isAuthenticated,
+    authMiddleware,
     expressAdapter(deleteUserUseCaseControllerFactory())
   );
 };
