@@ -8,6 +8,7 @@ export class UserEntity {
   private active: boolean;
   private created_at: Date;
   private updated_at: Date;
+  
   constructor(data: IUsers) {
     this.id_user = data.id_user;
     this.name = data.name;

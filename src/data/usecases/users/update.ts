@@ -2,7 +2,7 @@ import { Optional } from "@prisma/client/runtime/library";
 import { IUserRepository } from "../../../infra/interfaces/users/user-repository-interface";
 import { NotFoundError } from "../../../main/config/errors/notFound-error";
 import { IUpdateUserUseCase } from "../../interfaces/users/update-interface";
-import { UserEntity } from "../../../domain/entities/user-entity";
+import { UserEntity } from "../../../domain/entities/users/user-entity";
 
 export class UpdateUserUseCase implements IUpdateUserUseCase {
   constructor(private userRepository: IUserRepository) {}
