@@ -2,7 +2,7 @@ type IIncome = {
   id_income?: number;
   category_id: number;
   id_user: number;
-  due_date: Date;
+  entry_date: number;
   amount: number;
   type: string;
   created_at: Date;

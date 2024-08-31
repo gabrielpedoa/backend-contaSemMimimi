@@ -2,7 +2,7 @@ export class IncomeEntity {
   private id_income?: number;
   private category_id: number;
   private id_user: number;
-  private due_date: Date;
+  private   entry_date: number
   private amount: number;
   private type: string;
   private created_at: Date;
@@ -15,7 +15,7 @@ export class IncomeEntity {
     this.id_income = data.id_income;
     this.category_id = data.category_id;
     this.id_user = data.id_user;
-    this.due_date = data.due_date;
+    this.entry_date = data.entry_date;
     this.amount = data.amount;
     this.type = data.type;
     this.created_at = data.created_at;
@@ -30,7 +30,7 @@ export class IncomeEntity {
       id_income: this.id_income,
       category_id: this.category_id,
       id_user: this.id_user,
-      due_date: this.due_date,
+      entry_date: this.entry_date,
       amount: this.amount,
       type: this.type,
       created_at: this.created_at,
