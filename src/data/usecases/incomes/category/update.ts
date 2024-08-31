@@ -8,10 +8,14 @@ export class UpdateIncomeCategoryUseCase
   constructor(private readonly incomeRepository: IIncomeCategoryRepository) {}
 
   async execute(data: IIncomeCategory) {
+    const { id_category, ...rest } = data;
     const incomeCategory = await this.incomeRepository.loadById(
-      data.id_category!
+      Number(id_category!)
     );
     if (!incomeCategory) throw new NotFoundError("Income category not found");
-    return await this.incomeRepository.update(data);
+    return await this.incomeRepository.update({
+      id_category: Number(id_category),
+      ...rest,
+    });
   }
 }

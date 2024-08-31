@@ -2,8 +2,9 @@ import prisma from "../../prisma";
 
 export class IncomeRepository {
   public async create(data: Omit<IIncome, "id_income">): Promise<IIncome> {
+    const { due_date, ...rest } = data;
     return await prisma.income.create({
-      data: { ...data },
+      data: { due_date: new Date(due_date), ...rest },
     });
   }
 
