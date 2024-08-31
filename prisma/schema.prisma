@@ -23,7 +23,6 @@ model income {
   id_income   Int      @id @default(autoincrement())
   category_id Int
   id_user     Int
-  due_date    DateTime
   amount      Float
   type        String
   created_at  DateTime @default(now())
@@ -31,6 +30,7 @@ model income {
   active      Boolean  @default(true)
   name        String
   obs         String
+  entry_date  Int
 }
 
 model expense {
