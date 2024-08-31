@@ -4,6 +4,7 @@ export const createIncomeSchema = z.object({
   id_user: z.number({ required_error: "User ID is required" }).int().positive(),
   entry_date: z.number({ required_error: "Entry date is required" }),
   amount: z.number({ required_error: "Amount is required" }).positive(),
+  category_id: z.number({ required_error: "Amount is required" }).int().positive(),
   type: z.string({ required_error: "Type is required" }),
   name: z.string({ required_error: "Name is required" }),
   obs: z.string().optional(),

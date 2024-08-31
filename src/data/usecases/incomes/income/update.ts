@@ -5,8 +5,14 @@ import { IUpdateIncomeUseCase } from "../../../interfaces/incomes/income/update-
 export class UpdateIncomeUseCase implements IUpdateIncomeUseCase {
   constructor(private readonly incomeRepository: IIncomeRepository) {}
   async execute(data: IIncome): Promise<IIncome> {
-    const existsIncome = await this.incomeRepository.loadById(Number(data.id_income!));
+    const { id_income, ...rest } = data;
+    const existsIncome = await this.incomeRepository.loadById(
+      Number(id_income!)
+    );
     if (!existsIncome) throw new NotFoundError("Income not found");
-    return await this.incomeRepository.update(data);
+    return await this.incomeRepository.update({
+      id_income: Number(id_income),
+      ...rest,
+    });
   }
 }

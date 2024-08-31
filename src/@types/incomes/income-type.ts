@@ -9,5 +9,5 @@ type IIncome = {
   updated_at: Date;
   active: boolean;
   name: string;
-  obs: string;
+  obs: string | null;
 };
