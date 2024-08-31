@@ -37,12 +37,12 @@ model expense {
   id_expense  Int      @id @default(autoincrement())
   description String?
   category_id Int
-  due_date    DateTime
-  record_date DateTime
   created_at  DateTime @default(now())
   updated_at  DateTime @updatedAt
   active      Boolean  @default(true)
   name        String
+  due_date    Int
+  value       Float?
 }
 
 model income_category {

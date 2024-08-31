@@ -15,10 +15,10 @@ const router = Router({
 const routers: IRouter[] = [
   user,
   auth,
-  income,
   incomeCategory,
-  expense,
+  income,
   expenseCategory,
+  expense,
 ];
 
 export default (app: Express) => {

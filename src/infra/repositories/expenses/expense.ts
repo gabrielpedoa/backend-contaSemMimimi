@@ -13,6 +13,10 @@ export class ExpenseRepository {
     return await prisma.expense.findFirst({ where: { id_expense: id } });
   }
 
+  public async loadByName(name: string): Promise<IExpense | null> {
+    return await prisma.expense.findFirst({ where: { name: name } });
+  }
+
   public async update(data: IExpense): Promise<IExpense> {
     return await prisma.expense.update({
       data: { ...data },
