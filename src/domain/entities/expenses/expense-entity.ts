@@ -1,6 +1,6 @@
 export class ExpenseEntity {
   private id_expense?: number;
-  private description: string;
+  private description: string | null;
   private category_id: number;
   private due_date: Date;
   private record_date: Date;

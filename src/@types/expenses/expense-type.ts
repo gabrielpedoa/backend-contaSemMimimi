@@ -1,6 +1,6 @@
 type IExpense = {
   id_expense?: number;
-  description: string;
+  description: string | null;
   category_id: number;
   due_date: Date;
   record_date: Date;

@@ -1,3 +1,3 @@
 export interface ILoadByIdExpenseCategoryUseCase {
-  execute(id: number): Promise<IExpenseCategory | null>;
+  execute(id: number | string): Promise<IExpenseCategory | null>;
 }

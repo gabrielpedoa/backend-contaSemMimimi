@@ -1,7 +1,7 @@
 import * as z from "zod";
 
 export const createExpenseSchema = z.object({
-  description: z.string({ required_error: "Description is required" }),
+  description: z.string().optional(),
   category_id: z
     .number({ required_error: "Category ID is required" })
     .int()
@@ -14,7 +14,6 @@ export const createExpenseSchema = z.object({
 });
 
 export const updateExpenseSchema = z.object({
-  id_expense: z.string({ required_error: "Expense ID is required" }),
   description: z.string().optional(),
   category_id: z.number().int().positive().optional(),
   due_date: z.date().optional(),
