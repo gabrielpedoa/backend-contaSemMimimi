@@ -1,11 +1,13 @@
 import { Router } from "express";
 import expressAdapter from "../../adapter/expressAdapter";
-import { createUserUseCaseControllerFactory } from "../../../factory/controller/users/create";
-import { loadAllUsersUseCaseControllerFactory } from "../../../factory/controller/users/loadAll";
-import { loadByIdUserUseCaseControllerFactory } from "../../../factory/controller/users/loadById";
-import { updateUserUseCaseControllerFactory } from "../../../factory/controller/users/update";
-import { deleteUserUseCaseControllerFactory } from "../../../factory/controller/users/delete";
 import authMiddleware from "../../../middleware/authMiddleware";
+import {
+  createUserUseCaseControllerFactory,
+  deleteUserUseCaseControllerFactory,
+  loadAllUsersUseCaseControllerFactory,
+  loadByIdUserUseCaseControllerFactory,
+  updateUserUseCaseControllerFactory,
+} from "../../../factory/controller/users";
 
 export default async (router: Router) => {
   router.get(
